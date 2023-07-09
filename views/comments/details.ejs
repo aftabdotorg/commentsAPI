@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Details of <%= comment.username %></title>
+    <title>Details</title>
   </head>
   <body>
-    <h2>Comment id : <%= comment.id %></h2>
+    <h4>Comment id : <%= comment.id %></h4>
     <h2>User: <%= comment.username %></h2>
     <h2>comment: <%= comment.comment %></h2>
 
@@ -14,8 +14,8 @@
     <a href="/comments">Back to Home</a>
     <a href="/comments/<%= comment.id %>/edit">Edit Comment</a>
 
-    <form action="/commments/<%= comment.id %>?_method=DELETE" method="post">
+    <form method="POST" action="/comments/<%= comment.id %>?_method=DELETE">
       <button>Delete</button>
-    </form>
+  </form>
   </body>
 </html>
